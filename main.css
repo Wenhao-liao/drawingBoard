@@ -1,88 +1,133 @@
 /* 通用 */
-*{
-    margin:0;
-    padding:0;
+
+* {
+    margin: 0;
+    padding: 0;
 }
-ul{
+
+ul {
     list-style: none;
 }
-html{
+
+html {
     overflow: hidden;
+    font-size: 1vh;
 }
-#canvas{
-    display:block;
-    background:white;
-    position:fixed;
-    top:0;
-    left:0;
+
+#canvas {
+    display: block;
+    background: white;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
+
+
 /* icon需要 */
+
 .icon {
-    width: 1em; 
-    height: 1em;
-    vertical-align: -0.15em;
+    width: 1rem;
+    height: 1rem;
+    vertical-align: -0.15rem;
     fill: currentColor;
     overflow: hidden;
 }
+
+
 /*操作相关*/
-.action{
-    position:fixed;
-    top:20px;
-    left:10px;
+
+.action {
+    position: fixed;
+    top: 20px;
+    left: 10px;
 }
-.action svg{
-    width:3em;
-    height:3em;
-    padding-left:30px;
-    transition:all 0.3s;
+
+.action svg {
+    width: 3rem;
+    height: 3rem;
+    padding-left: 30px;
+    transition: all 0.3s;
 }
-.action svg.active{
-    fill:red;
-    transform:scale(1.2);
+
+.action svg.active {
+    fill: red;
+    transform: scale(1.2);
 }
+
+
 /* 粗细 */
-.thickness{
-    position:fixed;
-    bottom:10px;
-    top:10px;
-    right:10px;
+
+.thickness {
+    position: fixed;
+    top: 10px;
+    right: 10px;
 }
-.thickness svg{
-    width:4em;
-    height:4em;
-    padding-left:30px;
-    padding-top:10px;
-    transition:all 0.3s;
+
+.thickness svg {
+    width: 4rem;
+    height: 4rem;
+    padding-left: 30px;
+    padding-top: 10px;
+    transition: all 0.3s;
 }
-.thickness svg.active{
-    fill:red;
-    transform:scale(1.2);
+
+.thickness svg.active {
+    fill: red;
+    transform: scale(1.2);
 }
+
+
 /* 颜色 */
-.colors{
-    position:fixed;
-    top:70px;
-    left:40px;
+
+.colors {
+    position: fixed;
+    top: 70px;
+    left: 40px;
 }
-.colors > div{
-    width: 3em;
-    height:3em;
+
+.colors>div {
+    width: 3rem;
+    height: 3rem;
     border-radius: 50%;
-    margin:20px 0;
-    transition:all 0.3s;
+    margin: 1.5rem 0;
+    transition: all 0.3s;
 }
-.red{
-    background-color:red;
+
+.red {
+    background-color: red;
 }
-.green{
-    background-color:green;
+
+.green {
+    background-color: green;
 }
-.blue{
+
+.blue {
     background-color: blue;
 }
-.black{
-    background-color:black;
+
+.black {
+    background-color: black;
 }
-.colors div.active{
-    transform:scale(1.2);
+
+.colors div.active {
+    transform: scale(1.2);
+}
+
+@media screen and (max-width: 400px) {
+    .thickness {
+        position: fixed;
+        top:initial;
+        bottom:1rem;
+        right:1rem;
+        display:flex;
+        flex-direction: column;
+    }
+    
+    .thickness svg {
+        width: 4rem;
+        height: 4rem;
+        padding-left: 30px;
+        padding-top: 10px;
+        transition: all 0.3s;
+    }
 }

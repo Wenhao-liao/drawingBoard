@@ -9,9 +9,17 @@ ul{
 html{
     overflow: hidden;
 }
+#canvas{
+    display:block;
+    background:white;
+    position:fixed;
+    top:0;
+    left:0;
+}
 /* icon需要 */
 .icon {
-    width: 1em; height: 1em;
+    width: 1em; 
+    height: 1em;
     vertical-align: -0.15em;
     fill: currentColor;
     overflow: hidden;
@@ -19,7 +27,7 @@ html{
 /*操作相关*/
 .action{
     position:fixed;
-    top:10px;
+    top:20px;
     left:10px;
 }
 .action svg{

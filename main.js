@@ -6,7 +6,8 @@ window.onload = () =>{
     var mousedown = false;
     var lineWidth = 3;
     var clear = document.getElementById('clear');
-    //工具
+    var download = document.getElementById('download')
+;    //工具
     var eraser = document.getElementById('eraser');
     var brush = document.getElementById('brush');
     // 颜色
@@ -28,6 +29,8 @@ window.onload = () =>{
     chooseColor();
     clearCtx();
     chooseThickness();
+    downloadPainting();
+
  
     //监听鼠标事件，包括点击，松开和移动
     function listenToMouse(){
@@ -111,7 +114,16 @@ window.onload = () =>{
             eraser.classList.remove('active');
         }
     }
-    
+    function downloadPainting(){
+        download.onclick = function(){
+            var url = canvas.toDataURL('image/png');
+            var a = document.createElement('a');
+            document.body.appendChild(a);
+            a.href = url;
+            a.download = 'My painting';
+            a.click();
+        }
+    };
     //设置画布大小和监听窗口大小改变
     function actoSetCanvasSize(){
         setCanvasSize();

@@ -76,7 +76,7 @@ window.onload = () => {
                 var x = e.touches[0].clientX;
                 var y = e.touches[0].clientY;
                 lastPoint = { x: x, y: y };
-                drawCircle(x, y, 5);
+                drawCircle(x, y, lineWidth);
                 if (isUsingEraser) {
                     ctx.clearRect(x - 10, y - 10, 20, 20);
                 }
